@@ -150,22 +150,6 @@ img {
     z-index: 1;
 }
 
-
-/* Grid for pages */
-
-.search-results-item {
-    border-top: 1px var(--field-selected) solid;
-    border-bottom: 1px var(--field-selected) solid;
-}
-
-.search-results-article {
-    outline-offset: -5px;
-    display: grid;
-    grid-template-columns: 135px 1fr 127px;
-    margin: 30px 72px
-}
-
-
 /* Grid */
 
 .page {
@@ -409,12 +393,121 @@ img {
     color: var(--white-opacity);
 }
 
-/*.map-image {
+/*Search-form*/
+
+.search-form {
+    width: 568px;
+    box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
+    margin: 0 auto;
+    background-color: var(--basic-white);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.search-form-item {
+    font: inherit;
+    line-height: 26px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--basic-black);
+    margin: 0;
+    width: 458px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 30px;
     position: relative;
-    top: 0;
-    bottom: -120px;
-    z-index: 0;
-}*/
+    flex-wrap: wrap;
+}
+
+.search-form-input {
+    font: inherit;
+    line-height: 26px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--basic-black);
+    background-color: var(--neutral-grey);
+    border: none;
+    width: 346px;
+    padding: 6px 218px 6px 13px;
+    box-sizing: border-box;
+}
+
+.form-item-date-in {
+   padding-top: 55px;
+}
+
+.form-item-number {
+    width: 228px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.search-number {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.form-input-number {
+    width: 114px;
+    padding: 6px 40px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.children-label {
+    padding-left: 53px;
+}
+
+.calendar {
+    position: absolute;
+    right: 8px;
+    z-index: 2;
+}
+
+.calendar:hover path,
+.calendar:focus path {
+    fill: var(--basic-black);
+}
+
+.calendar:active path {
+    fill: var(--accent-light);
+}
+
+.calendar:focus {
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+}
+
+.search-button {
+    margin-top: 54px;
+    margin-bottom: 55px;
+    color: var(--basic-white);
+    text-transform: uppercase;
+    text-align: center;
+    background-color: var(--accent-light);
+    border: none;
+    padding: 16px 181px;
+    font-size: 21px;
+    line-height: 26px;
+    font-weight: 700;
+    width: 458px;
+}
+
+.search-button:hover,
+.search-button:focus {
+    background-color: var(--hover-light);
+}
+
+.search-button:active {
+    background-color: var(--click-light);
+    color: var(--white-opacity);
+}
 
 /* Filters */
 
@@ -490,6 +583,31 @@ img {
     top: 0;
 }
 
+.filter-input-checkbox:focus + label::before {
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+}
+
+.filter-input-checkbox:disabled + label::before {
+    content: "";
+    background-image: url(../img/checkbox-off-disabled.svg);
+    position: absolute;
+    width: 23px;
+    height: 23px;
+    left: 0px;
+    top: 0; 
+}
+
+.filter-input-checkbox:checked:disabled + label::before {
+    content: "";
+    background-image: url(../img/checkbox-on-disabled.svg);
+    position: absolute;
+    width: 27px;
+    height: 23px;
+    left: 0px;
+    top: 0; 
+}
+
 .price {
     justify-self: end;
 }
@@ -531,6 +649,21 @@ img {
     height: 4px;
     padding: 0;
     border: 8px solid var(--basic-white);
+    background-color: var(--slider-grey);
+    border-radius: 50%;
+    box-shadow: 0 2px 0 0 var(--toggle-shadow);
+    cursor: pointer;
+}
+
+.toggle:hover,
+.toggle:focus {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 4px;
+    height: 4px;
+    padding: 0;
+    border: 9px solid var(--basic-white);
     background-color: var(--slider-grey);
     border-radius: 50%;
     box-shadow: 0 2px 0 0 var(--toggle-shadow);
@@ -744,7 +877,8 @@ img {
     margin-right: 6px;
 }
 
-.button-detail:hover {
+.button-detail:hover,
+.button-detail:focus {
     background-color: var(--hover-light);
 }
 
@@ -764,7 +898,8 @@ img {
     padding: 3px 17px;
 }
 
-.button-booking:hover {
+.button-booking:hover,
+.button-bookin:focus {
     background-color: var(--hover-dark);
 }
 
@@ -880,3 +1015,4 @@ img {
 
 .copyright-logo:active path {
     fill: var(--click-logo);
+}
