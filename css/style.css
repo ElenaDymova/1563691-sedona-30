@@ -186,7 +186,7 @@ img {
     padding-top: 76px;
     padding-bottom: 77px;
     position: relative;
-    background-position: center, 0 0;
+    background-position: top center;
 }
 
 .main-image {
@@ -367,7 +367,11 @@ img {
     color: var(--basic-black);
     position: relative;
     right: 5px;
-    margin-bottom: 37px;
+    margin-bottom: 32px;
+}
+
+.search-text {
+    line-height: 25px;
 }
 
 .button {
@@ -380,7 +384,7 @@ img {
     background-color: var(--accent-dark);
     border: none;
     padding: 30px 138px;
-    margin-top: 30px;
+    margin-top: 29px;
 }
 
 .button:hover,
@@ -431,8 +435,35 @@ img {
     background-color: var(--neutral-grey);
     border: none;
     width: 346px;
-    padding: 6px 218px 6px 13px;
+    padding: 6px 100px 6px 13px;
     box-sizing: border-box;
+}
+
+.plus-adults {
+    position: relative;
+    left: 121px;
+    z-index: 1;
+}
+
+.minus-adults {
+    position: relative;
+    right: 90px;
+}
+
+.minus-children {
+    position: relative;
+    bottom: 20px;
+    left: 130px;
+}
+
+.plus-children {
+    position: relative;
+    left: 107px;
+}
+
+.input-adults {
+    position: relative;
+    left: 15px;
 }
 
 .form-item-date-in {
@@ -455,7 +486,7 @@ img {
 
 .form-input-number {
     width: 114px;
-    padding: 6px 40px;
+    padding: 6px 0px;
     box-sizing: border-box;
     text-align: center;
 }
@@ -761,6 +792,7 @@ img {
     font-size: 12px;
     line-height: 18px;
     margin-left: 46px;
+    margin-top: 9px;
 }
 
 .sorting-list {
@@ -771,6 +803,7 @@ img {
 
 .sorting-item {
     margin-right: 32px;
+    margin-top: -5px;
 }
 
 .sorting-link {
@@ -778,6 +811,10 @@ img {
     line-height: 18px;
     color: var(--black-opacity);
     border-bottom: var(--accent-light) dotted 1px;
+}
+
+.sorting-link-rating {
+    margin-left: 5px;
 }
 
 .sorting-link-current {
@@ -908,6 +945,19 @@ img {
     color: var(--white-opacity);
 }
 
+.button-detail-hotel-one,
+.button-booking-hotel-one {
+    margin-top: 1px;
+}
+
+.hotel-caption-hotel-two {
+    margin-top: -9px;
+}
+
+.search-results-article-hotel-three {
+    margin-top: 27px;
+}
+
 .rating-box {
     display: flex;
     flex-direction: column;
@@ -929,24 +979,22 @@ img {
     background-color: var(--footer);
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    margin-bottom: 30px;
     margin: 0 auto;
 }
 
 .footer-top {
-    margin-top: -120px;
+    margin-top: -125px;
 }
 
 .main-footer-contacts {
     text-align: center;
     margin-left: 70px;
-    margin-bottom: 45px;
 }
 
 .contacts-text-phone {
     padding: 0;
     margin: 0;
-    margin-top: -15px;
+    margin-top: -12px;
 }
 
 .footer-copyright {
@@ -966,6 +1014,7 @@ img {
 
 .main-footer-social {
     text-align: center;
+    margin-top: 5px;
 }
 
 .social-list {
