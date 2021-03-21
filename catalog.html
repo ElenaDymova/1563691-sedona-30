@@ -3,19 +3,19 @@
   <head>
     <meta charset="UTF-8">
     <title>Седона</title>
-    <link rel="icon" href="favicon.ico" type="image/x-icon" sizes="32x32">
-    <link rel="icon" href="img/favicon-32.svg" type="image/svg+xml" sizes="32x32">
-    <link rel="icon" href="img/favicon-16.svg" type="image/svg+xml" sizes="16x16">
-    <link rel="icon" href="img/favicon-152.png" type="apple-touch-icon" sizes="152x152">
+    <link  href="favicon.ico" type="image/x-icon" sizes="32x32">
+    <link  href="img/favicon-32.svg" type="image/svg+xml" sizes="32x32">
+    <link  href="img/favicon-16.svg" type="image/svg+xml" sizes="16x16">
+    <link  href="img/favicon-152.png" type="apple-touch-icon" sizes="152x152">
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
   </head>
 
   <body class="page-body">
     <header class="main-header container">
       <nav class="main-navigation">
         <a class="main-header-logo" href="index.html">
-          <img src="img/logo.svg" width="138" height="70" alt="Логотип Седона">
+          <img src="img/logo.png" width="138" height="70" alt="Логотип Седона">
         </a>
             <ul class="site-navigation">
               <li class="site-navigation-item"><a class="site-navigation-link" href="blank.html">Информация</a></li>
@@ -50,7 +50,7 @@
               </ul>
             </fieldset>
             <fieldset class="filter-housing">
-              <legend class="filter-caption">Тип жилья:</legend>
+              <legend class="filter-caption filter-caption-housing">Тип жилья:</legend>
               <ul class="housing-list">
                 <li class="filter-option">
                   <input class="visually-hidden filter-input-checkbox" type="checkbox" name="hostel" id="filter-hostel" checked>
@@ -67,27 +67,25 @@
               </ul>
             </fieldset>
             <div class="price">
-              <form method="get" action="https://echo.htmlacademy.ru">
-                <fieldset class="filter-item">
-                  <legend class="filter-item-caption">Стоимость в сутки (р):</legend>
-                  <div class="range-filter">
-                    <div class="price-controls">
-                      <label class="min-price">
-                        от <input class="price-input price-input-min" type="number" name="min-price" value="0">
-                      </label>
-                      <label class="max-price">
-                        до <input class="price-input price-input-max" type="number" name="max-price" value="3000">
-                      </label>
-                    </div>
-                    <div class="scale">
-                      <div class="bar"></div>
-                    </div>
-                    <div class="toggle toggle-min" tabindex="0"></div>
-                    <div class="toggle toggle-max" tabindex="0"></div>
+              <fieldset class="filter-item">
+                <legend class="filter-item-caption">Стоимость в сутки (р):</legend>
+                <div class="range-filter">
+                  <div class="price-controls">
+                    <label class="min-price">
+                      <input class="price-input price-input-min" type="text" name="min-price" value="от 0">
+                    </label>
+                    <label class="max-price">
+                      <input class="price-input price-input-max" type="text" name="max-price" value="до 3000">
+                    </label>
                   </div>
-                </fieldset>
-                <button class="button-form" type="submit">Показать</button>
-              </form>
+                  <div class="scale">
+                    <div class="bar"></div>
+                  </div>
+                  <div class="toggle toggle-min" tabindex="0"></div>
+                  <div class="toggle toggle-max" tabindex="0"></div>
+                </div>
+              </fieldset>
+              <button class="button-form" type="submit">Показать</button>
             </div>
           </form>
       </section>
@@ -110,7 +108,7 @@
           </ul>
           <div class="arrows-box">
             <a href="#" aria-label="Сортировать по возрастанию">
-              <svg class="arrow" aria-hidden="true" focusable="false" width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg class="arrow arrow-current" aria-hidden="true" focusable="false" width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M5.5 0L0 10H11L5.5 0Z" fill="#CACACA"/>
               </svg>
             </a>
@@ -133,7 +131,7 @@
                 <h3 class="hotel-caption">Amara Resort &#38; Spa</h3>
                 <div class="hotel-text">
                   <p>Гостиница</p>
-                  <p>от 4000р</p>
+                  <p>от 4000 р.</p>
                 </div>
                 <div class="hotel-buttons">
                   <a class="button-detail button-detail-hotel-one" href="#">Подробнее</a>
@@ -153,7 +151,7 @@
                 <h3 class="hotel-caption hotel-caption-hotel-two">Desert Quail Inn</h3>
                 <div class="hotel-text">
                   <p>Мотель</p>
-                  <p>от 3000р</p>
+                  <p>от 3000 р.</p>
                 </div>
                 <div class="hotel-buttons">
                   <a class="button-detail" href="#">Подробнее</a>
@@ -161,7 +159,7 @@
                 </div>
               </div>
               <div class="rating-box">
-                <img src="img/stars-three.svg" width="66" height="17" alt="Трехзвездочный мотель">
+                <img class="stars" src="img/stars-three.svg" width="66" height="17" alt="Трехзвездочный мотель">
                 <p class="rating">Рейтинг 8,9</p>
               </div>
             </article>
@@ -173,7 +171,7 @@
                 <h3 class="hotel-caption">Villas at Poco Diablo</h3>
                 <div class="hotel-text">
                   <p>Апартаменты</p>
-                  <p>от 2000р</p>
+                  <p>от 2000 р.</p>
                 </div>
                 <div class="hotel-buttons">
                   <a class="button-detail" href="#">Подробнее</a>
@@ -225,7 +223,8 @@
           </li>
         </ul>
       </section>
-      <section class="footer-copyright">
+      <section class="footer-copyright footer-copyright-catalog">
+        <h2 class="visually-hidden">Копирайтинг</h2>
         <p class="main-footer-text">Website by</p>
         <a class="copyright-logo" aria-label="Логотип HTML-Академии" href="https://htmlacademy.ru/intensive/htmlcss">
           <svg aria-hidden="true" focusable="false" width="115" height="41" viewBox="0 0 115 41" fill="none" xmlns="http://www.w3.org/2000/svg">

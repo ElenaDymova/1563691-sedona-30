@@ -51,7 +51,7 @@ body {
     min-width: 1200px;
     margin: 0;
     padding: 0;
-    font-family: PT Sans, Arial, sans-serif;
+    font-family: "PT Sans", Arial, sans-serif;
     font-size: 14px;
     line-height: 21px;
     font-weight: 400;
@@ -383,7 +383,7 @@ img {
     text-transform: uppercase;
     background-color: var(--accent-dark);
     border: none;
-    padding: 30px 138px;
+    padding: 30px 139px;
     margin-top: 29px;
 }
 
@@ -440,25 +440,47 @@ img {
 }
 
 .plus-adults {
+    background-image: url(../img/plus.svg);
     position: relative;
-    left: 121px;
+    width: 11px;
+    height: 11px;
+    right: 17px;
     z-index: 1;
+    border: none;
+    background-color: transparent;
 }
 
 .minus-adults {
+    background-image: url(../img/minus.svg);
     position: relative;
-    right: 90px;
+    left: 46px;
+    width: 12px;
+    height: 3px;
+    z-index: 1;
+    border: none;
+    background-color: transparent;
 }
 
 .minus-children {
+    background-image: url(../img/minus.svg);
     position: relative;
-    bottom: 20px;
-    left: 130px;
+    right: 87px;
+    width: 12px;
+    height: 3px;
+    z-index: 1;
+    border: none;
+    background-color: transparent;
 }
 
 .plus-children {
+    background-image: url(../img/plus.svg);
     position: relative;
-    left: 107px;
+    left: 115px;
+    width: 11px;
+    height: 11px;
+    z-index: 1;
+    border: none;
+    background-color: transparent;
 }
 
 .input-adults {
@@ -486,13 +508,18 @@ img {
 
 .form-input-number {
     width: 114px;
-    padding: 6px 0px;
+    padding: 6px 35px 6px 35px;
     box-sizing: border-box;
     text-align: center;
 }
 
 .children-label {
-    padding-left: 53px;
+    padding-left: 50px;
+}
+
+.input-children {
+    position: relative;
+    left:13px;
 }
 
 .calendar {
@@ -562,6 +589,11 @@ img {
     list-style: none;
     margin: 0;
     padding: 0;
+}
+
+.filter-caption-housing {
+    position: relative;
+    right: 2px;
 }
 
 .filter-services,
@@ -663,7 +695,7 @@ img {
 .scale {
     height: 2px;
     background: var(--white-opacity);
-    margin-top: 20px;
+    margin-top: 19px;
 }
 
 .bar {
@@ -674,7 +706,7 @@ img {
 
 .toggle {
     position: absolute;
-    top: 50px;
+    top: 49px;
     left: 0;
     width: 4px;
     height: 4px;
@@ -725,7 +757,7 @@ img {
 
 .price-controls {
     border: 2px solid var(--basic-white);
-    width: 316px;
+    width: 312px;
     display: flex;
 }
 
@@ -740,10 +772,22 @@ img {
 }
 
 .price-input {
-    width: 46px;
     background: none;
     border: none;
     color: var(--basic-white);
+    position: relative;
+    right: 15px;
+    text-transform: uppercase;
+}
+
+.price-input-min {
+    position: relative;
+    left: 35px;
+}
+
+.price-input-max {
+    position: relative;
+    left: 23px;
 }
 
 .button-form {
@@ -817,17 +861,12 @@ img {
     margin-left: 5px;
 }
 
-.sorting-link-current {
-    color: var(--accent-light);
-    border: none;
-}
-
 .arrows-box {
     margin-left: auto;
 }
 
 .arrow {
-    margin-left: 12px;
+    margin-left: 10px;
 }
 
 .arrow:hover path {
@@ -837,6 +876,12 @@ img {
 .arrow:active path,
 .arrow:focus path {
     fill: var(--accent-light);
+}
+
+.arrow-current:active path,
+.arrow-current:focus path,
+.arrow-current:hover path {
+    fill: var(--arrow-grey);
 }
 
 
@@ -866,6 +911,18 @@ img {
 
 .sorting-link:active {
     color: var(--basic-black);
+}
+
+.sorting-link-current {
+    color: var(--accent-light);
+    border: none;
+}
+
+.sorting-link-current:focus,
+.sorting-link-current:active,
+.sorting-link-current:hover {
+    color: var(--accent-light);
+    border: none;
 }
 
 .hotel-caption {
@@ -952,6 +1009,8 @@ img {
 
 .hotel-caption-hotel-two {
     margin-top: -9px;
+    position: relative;
+    left: 2px;
 }
 
 .search-results-article-hotel-three {
@@ -967,9 +1026,13 @@ img {
 
 .rating {
     background-color: var(--neutral-grey);
-    padding: 3px 15px;
+    padding: 4px 15px;
     margin: 0;
     margin-top: auto;
+}
+
+.stars {
+    margin-top: -5px;
 }
 
 /* Main footer */
@@ -1004,6 +1067,11 @@ img {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+}
+
+.footer-copyright-catalog {
+    margin-top: 35px;
+    margin-bottom: 35px;
 }
 
 .contacts-text {
