@@ -195,6 +195,9 @@ img {
 }
 
 .shape {
+    background-image: url(../img/shape.svg);
+    width: 1200px;
+    height: 57px;
     position: absolute;
     right: 0;
     bottom: 0;
@@ -377,6 +380,7 @@ img {
 .button {
     font-size: 21px;
     line-height: 26px;
+    font-weight: 700;
     text-align: center;
     color: var(--basic-white);
     vertical-align: middle;
@@ -439,6 +443,16 @@ img {
     box-sizing: border-box;
 }
 
+.search-form-input:hover {
+    background-color: var(--hover-field);
+}
+
+.search-form-input:active,
+.search-form-input:focus {
+    background-color: var(--basic-white);
+    border: 2px solid var(--field-selected);
+}
+
 .plus-adults {
     background-image: url(../img/plus.svg);
     position: relative;
@@ -483,6 +497,30 @@ img {
     background-color: transparent;
 }
 
+.minus-adults:hover,
+.minus-children:hover,
+.minus-adults:focus,
+.minus-children:focus {
+    background-image: url(../img/minus-hover.svg);
+}
+
+.minus-adults:active,
+.minus-children:active {
+    background-image: url(../img/minus-hover.svg);
+}
+
+.plus-adults:hover,
+.plus-children:hover,
+.plus-adults:focus,
+.plus-children:focus {
+    background-image: url(../img/plus-hover.svg);
+}
+
+.plus-adults:active,
+.plus-children:active {
+    background-image: url(../img/plus-active.svg);
+}
+
 .input-adults {
     position: relative;
     left: 15px;
@@ -523,18 +561,23 @@ img {
 }
 
 .calendar {
+    background-image: url(../img/calendar.svg);
     position: absolute;
     right: 8px;
-    z-index: 2;
+    width: 21px;
+    height: 23px;
+    z-index: 0;
+    border: none;
+    background-color: transparent;
 }
 
-.calendar:hover path,
-.calendar:focus path {
-    fill: var(--basic-black);
+.calendar:hover,
+.calendar:focus {
+    background-image: url(../img/calendar-hover.svg);
 }
 
-.calendar:active path {
-    fill: var(--accent-light);
+.calendar:active {
+    background-image: url(../img/calendar-active.svg);
 }
 
 .calendar:focus {
@@ -738,7 +781,7 @@ img {
 }
 
 .min-price {
-    font-family: "PT Sans";
+    font-family: "PT Sans", Arial, sans-serif;
     text-align: center;
     margin-top: 6px;
     margin-bottom: 8px;
@@ -747,7 +790,7 @@ img {
 }
 
 .max-price {
-    font-family: "PT Sans";
+    font-family: "PT Sans", Arial, sans-serif;
     text-align: center;
     margin-top: 6px;
     margin-bottom: 8px;
@@ -759,6 +802,7 @@ img {
     border: 2px solid var(--basic-white);
     width: 312px;
     display: flex;
+    border-radius: 2px;
 }
 
 .price-controls::after {
@@ -803,6 +847,7 @@ img {
     position: relative;
     left: 48%;
     transform: translate(-50%, 0);
+    border-radius: 2px;
 }
 
 .button-form:hover {
@@ -907,6 +952,7 @@ img {
 
 .sorting-link:hover {
     color: var(--accent-light);
+    border: none;
 }
 
 .sorting-link:active {
@@ -931,6 +977,19 @@ img {
     line-height: 26px;
     margin: 0;
     margin-top: -7px;
+}
+
+.hotel-link {
+    color: var(--basic-black);
+}
+
+.hotel-link:hover,
+.hotel-link:focus {
+    color: var(--accent-light);
+}
+
+.hotel-link:active {
+    color: var(--black-opacity);
 }
 
 .hotel-information {
